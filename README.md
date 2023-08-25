@@ -2,6 +2,17 @@
 
 O objetivo desse teste é avaliar as suas habilidades em programação.
 
+## Running the project
+
+1. Install Docker on your machine
+
+2. Execute this command
+> docker compose up
+
+3. Access in the browser
+> http://localhost:3000/
+
+Have Fun !!
 ### Antes de começar
  
 - Prepare o projeto para ser disponibilizado no Github, copiando o conteúdo deste repositório para o seu (ou utilize o fork do projeto e aponte para o Github). Confirme que a visibilidade do projeto é pública (não esqueça de colocar no readme a referência a este challenge);

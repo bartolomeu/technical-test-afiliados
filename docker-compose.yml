@@ -1,0 +1,31 @@
+services:
+  mysqldb:
+    image: mysql:8.0.28
+    volumes:
+      - mysql-bd:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: 'afilia'
+      MYSQL_ROOT_PASSWORD: 'pass123'
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+  api:
+    build: ./api
+    ports:
+      - '3001:3001'
+    expose:
+      - '4001'
+    depends_on:
+      - mysqldb
+  site:
+    build: ./site
+    ports:
+      - '3000:3000'
+    expose:
+      - '3000'
+    depends_on:
+      - api
+
+volumes:
+  mysql-bd:
